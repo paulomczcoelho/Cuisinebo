@@ -399,12 +399,26 @@ footer{
         }
     }   
 }
-@media (min-width:1601px) and (max-width:2400px){
+@media (min-width:1900px) and (max-width:2200px){
     .book{
         height: 120vh;
         section{
             display: inline-block;
             margin: 0 255px;
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+        }
+        img{
+            width: 55%;
+        }
+    }
+}
+@media (min-width:1601px) and (max-width:1900px){
+    .book{
+        height: 120vh;
+        section{
+            display: inline-block;
+            margin: 0 320px;
             background-color: rgba(255, 255, 255, 0);
             color: black;
         }
