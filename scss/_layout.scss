@@ -399,7 +399,21 @@ footer{
         }
     }   
 }
-@media (min-width:1900px) and (max-width:2200px){
+@media (min-width:2130px) and (max-width:2400px){
+    .book{
+        height: 145vh;
+        section{
+            display: inline-block;
+            margin: 0 255px;
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+        }
+        img{
+            width: 55%;
+        }
+    }
+}
+@media (min-width:1900px) and (max-width:2129px){
     .book{
         height: 135vh;
         section{
@@ -409,7 +423,7 @@ footer{
             color: black;
         }
         img{
-            width: 55%;
+            width: 65%;
         }
     }
 }
