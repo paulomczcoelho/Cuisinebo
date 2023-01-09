@@ -399,9 +399,9 @@ footer{
         }
     }   
 }
-@media (min-width:2130px) and (max-width:2400px){
+@media (min-width:2201px) and (max-width:2400px){
     .book{
-        height: 145vh;
+        height: 135vh;
         section{
             display: inline-block;
             margin: 0 255px;
@@ -413,7 +413,7 @@ footer{
         }
     }
 }
-@media (min-width:1900px) and (max-width:2129px){
+@media (min-width:1900px) and (max-width:2200px){
     .book{
         height: 135vh;
         section{
@@ -423,13 +423,13 @@ footer{
             color: black;
         }
         img{
-            width: 65%;
+            width: 55%;
         }
     }
 }
 @media (min-width:1601px) and (max-width:1900px){
     .book{
-        height: 120vh;
+        height: 125vh;
         section{
             display: inline-block;
             margin: 0 220px;
@@ -437,13 +437,13 @@ footer{
             color: black;
         }
         img{
-            width: 66%;
+            width: 55%;
         }
     }
 }
 @media (min-width:1101px) and (max-width:1600px){
     .book{
-        height: 100vh;
+        height: 165vh;
         section{
             display: inline-block;
             margin: 0 81px;
@@ -451,13 +451,13 @@ footer{
             color: black;
         }
         img{
-            width: 66%;
+            width: 70%;
         }
     }
 }
 @media (min-width:881px) and (max-width:1100px){
     .book{
-        height: 90vh;
+        height: 130vh;
         section{
             display: inline-block;
             margin: 0 81px;
@@ -468,13 +468,13 @@ footer{
         img{
             margin: 0 auto;
             display: block;
-            max-width: 70%;
+            max-width: 62%;
         }
     }
 }
 @media (min-width:700px) and (max-width:880px){
     .book {
-        height: 64vh;
+        height: 124vh;
         section{
             display: inline-block;
             margin: 0 81px;
@@ -485,7 +485,7 @@ footer{
         img{
             margin: 0 auto;
             display: block;
-            max-width: 55%;
+            max-width: 66%;
         }
     }
 }
