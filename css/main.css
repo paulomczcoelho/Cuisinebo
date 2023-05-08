@@ -409,7 +409,7 @@ footer {
     color: black;
   }
   .book img {
-    width: 66%;
+    width: 56%;
   }
 }
 @media (min-width: 1101px) and (max-width: 1600px) {
