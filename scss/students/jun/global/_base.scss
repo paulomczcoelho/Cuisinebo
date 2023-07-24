@@ -1,0 +1,55 @@
+$color-text: rgb(13, 13, 37);
+$color-main: rgb(255, 136, 0);
+$color-accent: rgb(255, 170, 77);
+$color-star: rgb(255, 196, 21);
+$color-grey: rgb(238, 241, 240);
+
+$font-lato: "Lato", sans-serif;
+$font-playFair: "Playfair Display", serif;
+
+$line-height: 2em;
+
+$breakpoint: (
+	sm: "screen and (min-width: 640px)",
+	md: "screen and (min-width: 768px)",
+	lg: "screen and (min-width: 1024px)",
+	xl: "screen and (min-width: 1280px)",
+);
+
+// mixin
+@mixin mq($bp) {
+	@media #{map-get($breakpoint, $bp)} {
+		@content;
+	}
+}
+
+@mixin linkStyle($color: $color-text) {
+	color: $color;
+	text-decoration: none;
+}
+
+@mixin textStyle($tag: null, $color: null) {
+	@if $tag == h1 {
+		font-size: 5rem;
+		font-family: $font-playFair;
+	} @else if $tag == h3 {
+		font-size: 4rem;
+		font-family: $font-playFair;
+	}
+	color: $color;
+}
+
+// base layout
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: $font-lato;
+	color: $color-text;
+}
+
+body {
+	font-size: 1.5em;
+}

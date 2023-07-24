@@ -1,0 +1,206 @@
+@use "base" as *;
+
+// header
+nav {
+  padding-top: 20px;
+  display: flex;
+
+  ul {
+    width: 50%;
+    display: inline-flex;
+  }
+  li {
+    font-size: 1em;
+    padding: 0 20px;
+  }
+  a {
+    color: $color-text;
+  }
+}
+
+main {
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.1)),
+    url("https://images.unsplash.com/photo-1479044769763-c28e05b5baa5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")
+      no-repeat center/cover;
+}
+
+// welcome
+.welcome {
+  width: 100%;
+  height: 100%;
+  @include flexLayoutCenter(column);
+
+  form {
+    width: 40%;
+    @include flexLayoutCenter(row);
+  }
+}
+
+// about
+.about {
+  padding: 50px 10% 150px 40%;
+  @include backgroundSetup("../images/about.png", 50%);
+
+  span {
+    background: $color-accent;
+    position: relative;
+    right: -5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: white;
+    padding-right: 10px;
+  }
+  i {
+    color: white;
+  }
+}
+
+// order
+.order,
+.book {
+  text-align: center;
+}
+.order {
+  padding: 50px;
+  ul {
+    width: 60%;
+    text-align: center;
+    margin: 40px auto;
+    display: flex;
+  }
+  li {
+    // float: left;
+    width: 20%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid lightgrey;
+  }
+  a {
+    color: $color-text;
+  }
+}
+
+.cuisine {
+  font-size: 1.3rem;
+  li {
+    &:first-of-type {
+      border-bottom: 2px solid $color-main;
+    }
+  }
+  .firstlink {
+    color: $color-main;
+  }
+}
+
+// gallery
+.gallery {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.5%;
+
+  & + .dots {
+    width: 10%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    li {
+      border: none;
+      width: 16.6666%;
+      color: $color-accent;
+    }
+  }
+  section {
+    height: 200px;
+    width: 100%;
+    margin: 2.5%;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .gallery-overlay {
+        left: 0;
+      }
+    }
+  }
+  .gallery-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    transition: left 0.7s;
+    @include flexLayoutCenter(column);
+  }
+}
+
+.img01 {
+  @include backgroundSetup("https://source.unsplash.com/fdlZBWIP0aM", center);
+}
+.img02 {
+  @include backgroundSetup("https://source.unsplash.com/Zyx6a0ReB18", center);
+}
+.img03 {
+  @include backgroundSetup("https://source.unsplash.com/WbA_PCv3_Co", center);
+}
+.img04 {
+  @include backgroundSetup("https://source.unsplash.com/SH6vc3VOOwE", center);
+}
+.img05 {
+  @include backgroundSetup("https://source.unsplash.com/ohnRXPYXDEE", center);
+}
+.img06 {
+  @include backgroundSetup("https://source.unsplash.com/j3gz0KReZbA", center);
+}
+.img07 {
+  @include backgroundSetup("https://source.unsplash.com/FFqNATH27EM");
+}
+.img08 {
+  @include backgroundSetup("https://source.unsplash.com/RwoKbjJdYvE");
+}
+
+// contact
+.book {
+  padding: 50px 0;
+  @include backgroundSetup("https://source.unsplash.com/ThtzElwvwyM");
+  * {
+    display: block;
+  }
+  i {
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 3rem;
+    border: 1px solid $color-main;
+    border-radius: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  section {
+    display: inline-block;
+    width: 45%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+  a {
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: $color-main;
+  }
+  img {
+    width: 80%;
+    padding: 50px;
+    margin: 30px auto;
+  }
+}
+.time {
+  font-family: $font-playFair;
+  font-size: 1.8rem;
+}
+
+// footer
+footer {
+  text-align: center;
+}

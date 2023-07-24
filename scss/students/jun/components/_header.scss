@@ -1,0 +1,54 @@
+@use "../global/base" as b;
+@use "../global/layout" as l;
+
+// main
+main {
+	height: 100vh;
+	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.1)),
+		url(https://images.unsplash.com/photo-1479044769763-c28e05b5baa5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80)
+			no-repeat center/cover;
+}
+
+// header
+.logo {
+	font-size: 1.5em;
+	font-family: b.$font-playFair;
+	color: b.$color-main;
+	padding-left: 20px;
+	width: 70%;
+	@include b.mq(lg) {
+		width: 30%;
+	}
+}
+
+nav {
+	@include l.headerFlex;
+
+	ul {
+		display: none;
+		@include b.mq(lg) {
+			display: inherit;
+			float: left;
+			width: 60%;
+		}
+
+		li {
+			float: left;
+
+			a {
+				@include b.linkStyle(b.$color-text);
+			}
+		}
+	}
+
+	a {
+		padding: 0 20px;
+		@include b.linkStyle(b.$color-accent);
+	}
+}
+
+.hamburger {
+	@include b.mq(lg) {
+		display: none;
+	}
+}

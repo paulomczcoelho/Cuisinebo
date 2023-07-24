@@ -1,0 +1,135 @@
+@use "../global/base" as b;
+@use "../global/layout" as l;
+
+// Order section
+.order {
+	@include l.orderLayout;
+
+	h3 {
+		@include b.textStyle(h3, _);
+	}
+
+	.cuisine {
+		width: 80%;
+		text-align: center;
+		justify-content: center;
+		margin: 40px auto;
+
+		@include b.mq(md) {
+			display: flex;
+		}
+
+		li {
+			margin: 0 auto;
+			max-width: 80%;
+			border-bottom: 3px solid b.$color-grey;
+			padding: 0 40px 10px 40px;
+
+			@include b.mq(md) {
+				margin: 0;
+			}
+
+			a {
+				@include b.linkStyle();
+			}
+
+			&:first-child {
+				border-bottom: 3px solid b.$color-main;
+			}
+		}
+
+		.firstlink {
+			color: b.$color-main;
+			width: 100%;
+		}
+	}
+
+	.dots {
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+
+		li {
+			margin-right: 5px;
+			color: b.$color-main;
+		}
+	}
+}
+
+//Gallery section
+.gallery {
+	@include l.galleryLayout;
+
+	@for $i from 1 through 8 {
+		.img0#{$i} {
+			@include l.imageLayout($i);
+		}
+	}
+
+	section {
+		height: 200px;
+		width: 100%;
+		min-width: 150px;
+		margin-right: 8px;
+		position: relative;
+		overflow: hidden;
+
+		&:hover .gallery-overlay {
+			left: 0;
+		}
+	}
+
+	.gallery-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: white;
+
+		.price,
+		.stars,
+		.menu-item,
+		.order-now {
+			background: rgba(0, 0, 0, 0.4);
+			display: block;
+			// margin-bottom: 0.3em;
+			font-size: 1.1em;
+		}
+
+		.order-now {
+			position: absolute;
+			bottom: 0;
+			margin-bottom: 0.5rem;
+			right: 50%;
+			transform: translateX(50%);
+		}
+
+		@include b.mq(lg) {
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			transition: left 0.5s;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.price,
+			.stars,
+			.menu-item,
+			.order-now {
+				background: none;
+				font-size: 1.3em;
+				margin-bottom: 0.5rem;
+			}
+
+			.order-now {
+				position: relative;
+			}
+		}
+
+		.stars {
+			color: b.$color-star;
+		}
+	}
+}

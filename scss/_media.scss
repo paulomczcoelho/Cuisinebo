@@ -1,0 +1,45 @@
+@media screen and (max-width: 1130px) {
+  nav ul {
+    display: none;
+  }
+
+  .hamburger,
+  .cart,
+  .search {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    width: 70%;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  .book section span {
+    color: white;
+  }
+
+  .book section {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 136, 0, 0.8);
+  }
+
+  .book img {
+    display: none;
+  }
+  .img03,
+  .img04,
+  .img05,
+  .img06 {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,46 @@
+@use "../global/_base.scss" as b;
+@use "../global/_layout.scss" as l;
+
+// About section
+.about {
+	@include l.aboutLayout;
+
+	padding-left: 40%;
+	padding-right: 10%;
+	padding-top: 50px;
+	padding-bottom: 150px;
+
+	h2 {
+		@include b.textStyle(h2, b.$color-main);
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		@include b.textStyle(h3, _);
+		margin-bottom: 30px;
+	}
+
+	p {
+		line-height: b.$line-height;
+		margin-bottom: 30px;
+	}
+
+	a {
+		@include b.linkStyle(white);
+		background-color: b.$color-main;
+		height: 40px;
+		padding: 10px 5px 10px 10px;
+		border-radius: 5px;
+
+		span {
+			background-color: b.$color-accent;
+			position: relative;
+			right: -5px;
+			height: 40px;
+			padding: 10px;
+			border-radius: 5px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

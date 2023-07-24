@@ -1,0 +1,68 @@
+@use "./base" as b;
+
+$image-list: (
+	1: url(https://source.unsplash.com/fdlZBWIP0aM),
+	2: url(https://source.unsplash.com/Zyx6a0ReB18),
+	3: url(https://source.unsplash.com/WbA_PCv3_Co),
+	4: url(https://source.unsplash.com/SH6vc3VOOwE),
+	5: url(https://source.unsplash.com/ohnRXPYXDEE),
+	6: url(https://source.unsplash.com/j3gz0KReZbA),
+	7: url(https://source.unsplash.com/FFqNATH27EM),
+	8: url(https://source.unsplash.com/RwoKbjJdYvE)
+);
+
+// header
+@mixin headerFlex {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+	padding-right: 30px;
+}
+// welcome
+@mixin welcomeFlex {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+// about
+@mixin aboutLayout {
+	background: url(../../images/about.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+// order
+@mixin orderLayout {
+	padding: 50px;
+	text-align: center;
+}
+// gallery
+@mixin galleryLayout {
+	display: flex;
+	overflow: auto;
+
+	@include b.mq(md) {
+		overflow: hidden;
+		max-width: 800px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 1.5%;
+		row-gap: 0.5rem;
+	}
+}
+
+@mixin imageLayout($imageNum) {
+	background: #{map-get($image-list, $imageNum)};
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+// contact
+
+// footer
